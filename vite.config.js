@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/products': {
-        target: 'https://codevector-task-au48.onrender.com/',
+        target: 'https://codevector-task-au48.onrender.com',
         changeOrigin: true,
       },
     },
