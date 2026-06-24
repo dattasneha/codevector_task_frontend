@@ -153,7 +153,8 @@ export default function App() {
         }
 
         const t0 = performance.now();
-        const res = await fetch(`/products?${params}`, {
+        const API_BASE = import.meta.env.DEV ? '' : 'https://codevector-task-au48.onrender.com';
+        const res = await fetch(`${API_BASE}/products?${params}`, {
           signal: controller.signal,
         });
         setLatency(Math.round(performance.now() - t0));
